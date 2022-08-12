@@ -9,8 +9,6 @@
     
     <title>
         
-            Hello World |
-        
         kaneko
     </title>
     
@@ -118,7 +116,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">Hello World</span>
+            <span class="title-hover-animation"></span>
         </div>
 
         
@@ -137,8 +135,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-08-13 01:53:16</span>
-        <span class="mobile">2022-08-13 01:53</span>
+        <span class="pc">2022-08-13 03:09:01</span>
+        <span class="mobile">2022-08-13 03:09</span>
     </span>
     
     
@@ -155,7 +153,43 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="Welcome-to-My-Blooooooooog"><a href="#Welcome-to-My-Blooooooooog" class="headerlink" title="Welcome to My Blooooooooog!"></a>Welcome to My Blooooooooog!</h1>
+            <p><strong>Note:主要是为了防止自己遗忘，以及一个简单的分享</strong></p>
+<h1 id="需要提前安装好的工具"><a href="#需要提前安装好的工具" class="headerlink" title="需要提前安装好的工具"></a>需要提前安装好的工具</h1><ul>
+<li>nodejs</li>
+<li>用nodejs安装hexo</li>
+<li>git</li>
+<li>github建立个人主页的仓库</li>
+<li>notepad++</li>
+</ul>
+<h1 id="傻瓜式创建步骤"><a href="#傻瓜式创建步骤" class="headerlink" title="傻瓜式创建步骤"></a>傻瓜式创建步骤</h1><ol>
+<li>新建一个空文件夹，我命名为<strong>Blog</strong> </li>
+<li>进入该文件夹，单击右键，点git bash</li>
+<li>命令行输入指令：<ul>
+<li><code>hexo init</code> 由于github是国外网站，第一次可能会因为网络问题出错，多输入几次命令行就行了</li>
+<li><code>hexo npm install hexo-deployer-git --save</code></li>
+<li><code>hexo g</code> 生成更新博客文件</li>
+<li><code>hexo s</code> 本地查看，方便调试</li>
+</ul>
+</li>
+<li>以notepad++打开 <strong>Blog</strong>下的 <strong>config.yml</strong> 文件<ul>
+<li>可以将<strong>title</strong>自定义</li>
+<li><strong>url</strong>改成github homepage网址，比如我的个人博客主页网址是<a href="https://zirongjin.github.io/">https://zirongjin.github.io/</a> </li>
+<li>翻到最下面deploy那里，将下面的代码拷贝过去替换默认的deploy属性。注意，把github.com那个地方的地址改成你自己的homepage网址。最后按Ctrl+S快速保存<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:ZiRongJin/ZiRongJin.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>回到git bash界面，输入<code>hexo g -d</code>按回车后，打开个人网站，就能看到一个初步的博客样式啦！接下来是导入博客主题以及自定义</li>
+</ol>
+<h1 id="导入theme（以keep-theme为例）"><a href="#导入theme（以keep-theme为例）" class="headerlink" title="导入theme（以keep theme为例）"></a>导入theme（以keep theme为例）</h1><ol>
+<li>依然是在git bash 里，输入一下指令下载keep theme (其他theme可以在<a class="link"   target="_blank" rel="noopener" href="https://hexo.io/themes/" >https://hexo.io/themes/<i class="fas fa-external-link-alt"></i></a> 中挑选)<ul>
+<li><code>npm install hexo-theme-keep</code></li>
+</ul>
+</li>
+<li>以notepad++打开<strong>Blog</strong>下的 <strong>config.yml</strong> 文件,翻到最下面，找到theme: 属性，将默认的landscape改成keep，保存文件</li>
+<li>回到git bash界面，输入<code>hexo g -d</code>按回车后，打开个人网站，就能看到博客风格变成了keep样式。(服务器部署需要一段时间，所以可能刚打开的时候依然是landscape theme，可以通过在git bash输入<code>hexo s</code>快速查看)</li>
+<li>关于keep theme样式自定义，可以打开<strong>Blog\node_modules\hexo-theme-keep</strong> 目录下的 <strong>config.yml</strong> 文件(用NotePad++打开)，按照keep的<a class="link"   target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/" >配置指南<i class="fas fa-external-link-alt"></i></a>即可进行keep主题内的自定义，更改属性后记得保存</li>
+</ol>
+<h1 id="关于博客存放的位置以及更新发表"><a href="#关于博客存放的位置以及更新发表" class="headerlink" title="关于博客存放的位置以及更新发表"></a>关于博客存放的位置以及更新发表</h1><p>文章以markdown的格式(.md)存在<strong>Blog\source_posts</strong>下面，可以用markdown的编辑软件(如obsidian)在该文件夹下创建一个仓库，然后直接用编辑软件新建md博客文章，写好之后再用git bash的指令<code>hexo g -d</code>进行更新发布，以及最开始的hello-world.md不要乱动(可以改里面内容，但是不要把该文件移到别的位置去)</p>
+
         </div>
 
         
@@ -165,21 +199,21 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2022/08/13/daily/hexo%20%E5%8D%9A%E5%AE%A2%E7%AE%80%E5%82%BB%E7%93%9C%E5%BC%8F%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4/"
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/08/13/hello-world/"
                         >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item"></span>
-                                <span class="post-nav-item">Prev posts</span>
+                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
                             </span>
                         </a>
                     </div>
-                
                 
             </div>
         
