@@ -9,8 +9,6 @@
     
     <title>
         
-            Archive: 2022 |
-        
         kaneko
     </title>
     
@@ -427,95 +425,63 @@ $logo-image-box-width = 46px;
             <div class="main-content">
 
                 
-                    <div class="fade-in-down-animation">
-    <div class="archive-container ">
-        $archive-year-font-size = 1.8rem;
-$archive-year-count-font-size = 1.2rem;
-$article-title-font-size = 1.2rem;
-$article-date-font-size = 1rem;
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
 
-.archive-list-container {
+                
 
-  .archive-item {
-    margin-bottom: $component-spacing-value;
+                <h3 class="home-article-title">
+                    <a href="/2022/08/12/hello-world/">
+                        Hello World
+                    </a>
+                </h3>
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+                <div class="home-article-content markdown-body">
+                    
+                        Welcome to My Blooooooooog!
+        
+            
+        
+        
+          var ap = new APlayer({
+            element: doc...
+                    
+                </div>
 
-    .archive-item-header {
-      margin-bottom: 10px;
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Aug 12 2022 13:11:31 GMT+0800">2022-08-12</span></span>
+        
+        
+    </div>
 
-      .archive-year {
-        font-size: $archive-year-font-size;
+    <a href="/2022/08/12/hello-world/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
 
-        +keep-tablet() {
-          font-size: $archive-year-font-size - 0.2rem;
-        }
+            </li>
+        
+    </ul>
 
-        color: var(--second-text-color);
-        font-weight: 600;
-        margin-right: 6px;
-      }
+    <div class="home-paginator">
+        .paginator {
+  font-size: 1rem;
+  margin-top: 30px;
 
-
-      .archive-year-post-count {
-        font-size: $archive-year-count-font-size;
-        font-weight: 500;
-        color: var(--second-text-color);
-
-        +keep-tablet() {
-          font-size: $archive-year-count-font-size * 0.9;
-        }
-      }
-
-    }
-
-
-    .article-list {
-
-      padding-left: 10px;
-
-      +keep-tablet() {
-        padding-left: 0;
-      }
-
-      .article-item {
-        font-size: 1rem;
-        margin-top: 18px;
-
-        +keep-tablet() {
-          margin-top: 16px;
-        }
-
-        +keep-mobile() {
-          margin-top: 14px;
-        }
-
-        &:hover {
-          a.article-title, .article-date {
-            color: var(--primary-color);
-          }
-        }
-
-
-        a.article-title {
-          color: var(--default-text-color);
-        }
-
-        .article-date {
-          font-size: $article-date-font-size;
-          float: right;
-        }
-      }
-    }
+  a.prev {
+    float: left;
   }
+
+  a.next {
+    float: right;
+  }
+
 }
-
-
 
     </div>
 </div>
+
 
                 
             </div>
@@ -719,6 +685,7 @@ $tools-item-border-radius = 1px;
     
 
 </main>
+
 
 
 
